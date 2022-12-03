@@ -4,11 +4,12 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String url = "Mr John Smith ";
         url = replaceSpaces(url, 13);
+        // url = URLify(url, 13);
         System.out.println(url);
     }
     
-    public static String URLify(String url) {
-        return url.trim().replace(" ", "%20");
+    public static String URLify(String url, int trueLength) {
+        return url.substring(0, trueLength).replace(" ", "%20");
     }
     
     public static String replaceSpaces(String str, int trueLength) {
